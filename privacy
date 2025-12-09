@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Privacy Policy | HengHengDigital 兴兴社媒营销团</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #eef3fb;
+      font-family: 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+      color: #020617;
+    }
+
+    .policy-container888 {
+      max-width: 980px;
+      background: #ffffff;
+      margin: 20px auto;
+      padding: 28px 22px;
+      border-radius: 16px;
+      border: 2px solid #0f172a;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.12);
+    }
+
+    .policy-title888 {
+      font-size: 28px;
+      font-weight: 900;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .policy-subtitle888 {
+      text-align: center;
+      font-size: 14px;
+      color: #475569;
+      margin-bottom: 22px;
+    }
+
+    .policy-section888 {
+      margin-bottom: 22px;
+    }
+
+    .policy-section888 h3 {
+      font-size: 20px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .policy-section888 p {
+      font-size: 15px;
+      line-height: 1.8;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .policy-divider888 {
+      height: 2px;
+      background: linear-gradient(90deg, #0ea5e9, #22c55e);
+      border-radius: 999px;
+      margin: 26px 0 22px;
+    }
+
+    /* ✅ Mobile Optimisation */
+    @media (max-width: 768px) {
+      .policy-container888 {
+        margin: 12px;
+        padding: 20px 14px;
+      }
+
+      .policy-title888 {
+        font-size: 22px;
+      }
+
+      .policy-section888 h3 {
+        font-size: 17px;
+      }
+
+      .policy-section888 p {
+        font-size: 14px;
+      }
+    }
+
+    /* ✅ Footer */
+    .policy-footer888 {
+      text-align: center;
+      font-size: 12px;
+      color: #334155;
+      margin-top: 30px;
+      border-top: 1px solid #e5e7eb;
+      padding-top: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="policy-container888">
+
+    <div class="policy-title888">Privacy Policy 隐私政策</div>
+    <div class="policy-subtitle888">
+      HengHengDigital™ ｜ 兴兴社媒营销团
+    </div>
+
+    <div class="policy-divider888"></div>
+
+    <!-- ENGLISH -->
+    <div class="policy-section888">
+      <h3>1. Information We Collect</h3>
+      <p>We may collect personal information when you contact us, such as your name, messaging ID, email address, and any details you provide voluntarily for consultation purposes.</p>
+      <p>We do not collect sensitive personal data such as identity numbers, banking credentials, or passwords.</p>
+    </div>
+
+    <div class="policy-section888">
+      <h3>2. How We Use Your Information</h3>
+      <p>Your information is used only for communication, customer support, service consultation, and improvement of our services.</p>
+      <p>We will not sell, rent, or share your personal data with any third party for marketing purposes.</p>
+    </div>
+
+    <div class="policy-section888">
+      <h3>3. Data Protection</h3>
+      <p>We take appropriate technical and organizational measures to protect your personal information against unauthorized access, misuse, or disclosure.</p>
+    </div>
+
+    <div class="policy-section888">
+      <h3>4. Cookies & Tracking</h3>
+      <p>Our website may use basic cookies or traffic analysis tools only for performance monitoring and advertisement review purposes.</p>
+      <p>No personally identifiable information is stored through cookies.</p>
+    </div>
+
+    <div class="policy-section888">
+      <h3>5. Your Consent</h3>
+      <p>By using our website or contacting us through our platforms, you consent to the terms of this privacy policy.</p>
+    </div>
+
+    <div class="policy-section888">
+      <h3>6. Policy Updates</h3>
+      <p>We reserve the right to update this privacy policy at any time without prior notice. All changes will be reflected on this page.</p>
+    </div>
+
+    <div class="policy-divider888"></div>
+
+    <!-- CHINESE -->
+    <div class="policy-section888">
+      <h3>一、我们收集哪些资料</h3>
+      <p>当您通过 WhatsApp、Telegram、Messenger 或其他平台联系我们时，我们可能会收集您主动提供的资料，例如姓名、联系方式与咨询内容。</p>
+      <p>我们不会收集任何敏感资料，如身份证号码、银行账号或密码。</p>
+    </div>
+
+    <div class="policy-section888">
+      <h3>二、资料的使用方式</h3>
+      <p>所有资料仅用于沟通、客户服务、配套说明与服务优化用途。</p>
+      <p>我们不会出售、出租或将您的资料提供给任何第三方作为营销用途。</p>
+    </div>
+
+    <div class="policy-section888">
+      <h3>三、数据安全</h3>
+      <p>我们将采取合理的技术与管理措施，保护您的资料不被滥用、泄露或未经授权访问。</p>
+    </div>
+
+    <div class="policy-section888">
+      <h3>四、Cookies 与追踪</h3>
+      <p>本网站可能使用基础流量分析工具与 Cookies 作为网站与广告审核用途。</p>
+      <p>所有 Cookies 不包含任何可识别您身份的个人资料。</p>
+    </div>
+
+    <div class="policy-section888">
+      <h3>五、您的同意</h3>
+      <p>当您使用本网站或与我们联系，即表示您同意本隐私政策内容。</p>
+    </div>
+
+    <div class="policy-section888">
+      <h3>六、政策更新</h3>
+      <p>我们有权随时更新本隐私政策，更新后将直接显示于本页面，恕不另行通知。</p>
+    </div>
+
+    <div class="policy-footer888">
+      © 2025 HengHengDigital™ ｜ 兴兴社媒营销团 ｜ All Rights Reserved
+    </div>
+
+  </div>
+
+</body>
+</html>
