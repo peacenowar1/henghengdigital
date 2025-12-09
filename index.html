@@ -880,31 +880,66 @@ background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 40%, #e2e8f0 100%);
   }
 }
 
-    /* ===== FOOTER STYLE ===== */
+   /* ===== FOOTER ===== */
 .footer888 {
   width: 100%;
   background: linear-gradient(135deg, #020617, #0f172a);
-  padding: 18px 10px;
+  padding: 22px 10px;
   text-align: center;
   margin-top: 24px;
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
 }
 
+/* COPYRIGHT TEXT */
 .footer-text888 {
   color: #e5e7eb;
-  font-size: 13.5px;   /* ✅ PC size */
+  font-size: 13.5px;
   font-weight: 600;
   letter-spacing: 0.5px;
-  font-family: 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+  margin-top: 18px;
 }
 
-/* ✅ Mobile smaller & cleaner */
+/* QUICK LINKS WRAPPER */
+.footer-links888 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* QUICK LINK BUTTON */
+.footer-link-btn888 {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-link-btn888:hover {
+  background: #334155;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* MOBILE FOOTER TEXT SIZE */
 @media (max-width: 768px) {
   .footer-text888 {
-    font-size: 11.5px;
+    font-size: 12px;
     line-height: 1.6;
   }
+
+  .footer-link-btn888 {
+    font-size: 13px;
+    padding: 8px 18px;
+  }
 }
+
 
 
   </style>
@@ -1280,8 +1315,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- FOOTER -->
 <div class="footer888">
+
+  <!-- QUICK LINKS SECTION -->
+  <div class="footer-links888">
+    <div class="footer-link-btn888"
+         onclick="window.open('https://henghengdigital.com/', '_self')">
+      🏠 首页 Home
+    </div>
+
+    <div class="footer-link-btn888"
+         onclick="window.open('https://henghengdigital.com/privacy', '_self')">
+      🔒 隐私政策 Privacy Policy
+    </div>
+  </div>
+
+  <!-- COPYRIGHT -->
   <div class="footer-text888">
     © 2025 HengHengDigital™ ｜ 兴兴社媒营销团 ｜ All Rights Reserved
   </div>
+
 </div>
 
