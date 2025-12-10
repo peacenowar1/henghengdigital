@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>关于我们 | HengHengDigital 兴兴社媒营销团</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="HengHengDigital 是一支专注社交媒体内容规划、账号结构优化与长期品牌成长的团队，协助中小企业、电商与个人品牌建立更稳定、可持续的线上形象。">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+  *,*::before,*::after{box-sizing:border-box;}
+  html,body{width:100%;max-width:100%;overflow-x:hidden;background:#eef3fb;font-family:'Microsoft YaHei','Helvetica Neue',Arial,sans-serif;color:#111827;}
+
+  .section-wrapper{max-width:1180px;margin:0 auto;padding:0 12px;}
+  .section-title-main{font-size:32px;font-weight:800;text-align:center;color:#031b4e;margin-bottom:10px;}
+  .section-subtitle-main{font-size:16px;text-align:center;color:#4b5563;margin-bottom:24px;font-weight:600;}
+
+  @media(min-width:992px){
+    .section-title-main{font-size:44px;}
+    .section-subtitle-main{font-size:22px;}
+  }
+
+  .aboutbox888{
+    background:radial-gradient(circle at top,#ffffff 0%,#e5edff 45%,#e0f2fe 100%);
+    padding:36px 28px;border-radius:18px;
+    box-shadow:0 12px 30px rgba(15,23,42,.16);
+    border:1px solid #cbd5f5;width:96%;max-width:1120px;margin:26px auto;
+  }
+
+  .about-heading888{font-size:28px;font-weight:900;margin-bottom:16px;color:#020617;display:flex;align-items:center;gap:10px;}
+  .about-heading888 i{color:#0ea5e9;}
+  .about-text-cn888,.about-text-en888{font-size:18px;line-height:1.95;color:#1f2937;margin-bottom:12px;font-weight:600;}
+  .about-tagline888{font-size:17px;font-weight:900;color:#0369a1;}
+
+  @media(min-width:992px){
+    .about-text-cn888,.about-text-en888{font-size:22px;}
+    .about-heading888{font-size:34px;}
+    .about-tagline888{font-size:20px;}
+  }
+
+  .marketing666{
+    max-width:1180px;margin:20px auto;background:#ffffff;padding:36px 32px;border-radius:18px;
+    box-shadow:0 14px 32px rgba(15,23,42,.16);border:1px solid #cbd5f5;
+  }
+
+  .marketing-title{font-size:30px;font-weight:900;text-align:center;color:#020617;}
+  .marketing-subtitle{font-size:20px;text-align:center;color:#4b5563;font-weight:700;margin-bottom:16px;}
+  .marketing-content{font-size:18px;text-align:center;color:#4b5563;margin-bottom:26px;line-height:2;font-weight:600;}
+
+  @media(min-width:992px){
+    .marketing-title{font-size:40px;}
+    .marketing-subtitle{font-size:26px;}
+    .marketing-content{font-size:22px;}
+  }
+
+  .marketing-feature{display:flex;align-items:center;margin-bottom:14px;padding:14px;
+    background:linear-gradient(135deg,#f9fafb,#eff6ff);border-radius:14px;border:1px solid #e5e7eb;
+  }
+  .icon-box{
+    width:54px;height:54px;display:flex;align-items:center;justify-content:center;
+    background:linear-gradient(45deg,#0ea5e9,#22c55e);color:#fff;font-size:22px;
+    border-radius:16px;margin-right:14px;box-shadow:4px 4px 14px rgba(15,23,42,.35);
+  }
+  .marketing-feature p{font-size:18px;font-weight:700;line-height:1.9;margin:0;}
+
+  .who-section{margin:10px auto 26px;}
+  .who-grid{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;}
+  .who-card{background:#0f172a;color:#e5e7eb;border-radius:16px;padding:18px;flex:1 1 260px;max-width:360px;}
+  .who-title{font-size:20px;font-weight:900;margin-bottom:10px;display:flex;gap:6px;}
+  .who-text{font-size:16px;line-height:1.9;}
+
+  @media(min-width:992px){
+    .who-title{font-size:24px;}
+    .who-text{font-size:18px;}
+  }
+
+  .stats-bar888{max-width:1180px;margin:16px auto 36px;background:#020617;border-radius:16px;padding:18px;
+    display:flex;flex-wrap:wrap;gap:16px;justify-content:center;}
+  .stats-item888{text-align:center;color:#e5e7eb;flex:1 1 160px;}
+  .stats-number888{font-size:26px;font-weight:900;}
+  .stats-label888{font-size:14px;color:#9ca3af;font-weight:700;}
+
+  /* ✅ SERVICE BUTTON GRID (NO TRACKERS) */
+  .buttoncontainer886868{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;padding:20px 10px;max-width:1160px;margin:0 auto 30px;}
+  .buttoncontainer886868>div{display:flex;align-items:center;justify-content:center;padding:14px 24px;
+    border-radius:999px;font-weight:900;font-size:16px;color:white;cursor:pointer;box-shadow:0 8px 18px rgba(15,23,42,.25);}
+  .telegrambutton8868{background:#0ea5e9;}
+  .instagrambutton8868{background:#ec4899;}
+  .tiktokbutton8868{background:#020617;}
+  .youtubebutton8868{background:#ef4444;}
+  .xiaohongshubutton8868{background:#f97316;}
+  .twitterbutton8868{background:#38bdf8;}
+  .facebookservicesbutton8868{background:#2563eb;}
+  .fbliveviewsbutton8868{background:#1d4ed8;}
+  .postcommentsbutton8868{background:#6b7280;}
+  .videoviews8868{background:#059669;}
+  .postlikes8868{background:#111827;}
+  .chineseservices8868{background:#d97706;}
+
+  @media(min-width:992px){
+    .buttoncontainer886868>div{width:22%;font-size:19px;padding:18px 28px;}
+  }
+
+  .footer888{background:linear-gradient(135deg,#020617,#0f172a);padding:22px 10px;text-align:center;}
+  .footer-text888{color:#e5e7eb;font-size:13.5px;font-weight:600;}
+    
+    
+    /* ✅ SERVICE CTA TEXT (above service buttons) */
+.section-intro888 {
+  color: #020617;
+  font-size: 22px;      /* PC size */
+  font-weight: 900;
+  font-family: 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.section-intro888 i {
+  font-size: 24px;      
+  color: #0ea5e9;
+}
+
+/* 📱 Mobile version */
+@media (max-width: 768px) {
+  .section-intro888 {
+    font-size: 16px;
+  }
+
+  .section-intro888 i {
+    font-size: 17px;
+  }
+}
+
+/* ✅ Animation for pointing hand */
+.animation105 {
+  animation: pulseEffect 2s infinite;
+}
+
+@keyframes pulseEffect {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.14); }
+  100% { transform: scale(1); }
+}
+    
+    /* ===== FOOTER ===== */
+.footer888 {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  padding: 22px 10px;
+  text-align: center;
+  margin-top: 24px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+/* COPYRIGHT TEXT */
+.footer-text888 {
+  color: #e5e7eb;
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-top: 18px;
+}
+
+/* QUICK LINKS WRAPPER */
+.footer-links888 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+/* QUICK LINK BUTTON */
+.footer-link-btn888 {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-link-btn888:hover {
+  background: #334155;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* ✅ FOOTER SOCIAL LINKS */
+.footer-social888 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.footer-social-link888 {
+  color: #e5e7eb;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.85;
+  transition: 0.25s ease;
+}
+
+.footer-social-link888 i {
+  font-size: 14px;
+}
+
+.footer-social-link888:hover {
+  opacity: 1;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+/* MOBILE FOOTER SIZE */
+@media (max-width: 768px) {
+  .footer-text888 {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .footer-link-btn888 {
+    font-size: 13px;
+    padding: 8px 18px;
+  }
+
+  .footer-social-link888 {
+    font-size: 12.5px;
+  }
+}
+
+
+
+  </style>
+</head>
+
+<body>
+
+<!-- ABOUT INTRO -->
+<div class="aboutbox888">
+  <div class="about-heading888"><i class="fa fa-building-o"></i> 关于我们 | About Us</div>
+
+  <p class="about-text-cn888">
+    HengHengDigital 是一支以马来西亚为基地的社交媒体营销团队，专注于内容规划、账号结构优化与长期品牌成长，
+    协助中小企业、电商、课程与个人品牌建立更稳定、可持续的线上形象。
+  </p>
+
+  <p class="about-text-en888">
+    HengHengDigital is a Malaysia-based social media marketing team focused on content planning,
+    account structure optimisation and long-term brand growth for SMEs, e-commerce and personal brands.
+  </p>
+
+  <p class="about-tagline888">我们重视长期规划，而不只是短期数字呈现</p>
+</div>
+
+<!-- WHAT WE DO -->
+<div class="marketing666">
+  <h1 class="marketing-title">我们在做什么 | What We Do</h1>
+  <h2 class="marketing-subtitle">让社交媒体变成长期可控的品牌资产</h2>
+
+  <div class="marketing-feature">
+    <div class="icon-box"><i class="fa fa-lightbulb-o"></i></div>
+    <p>🎯 内容方向与品牌定位梳理</p>
+  </div>
+
+  <div class="marketing-feature">
+    <div class="icon-box"><i class="fa fa-clone"></i></div>
+    <p>📋 账号结构与整体版面优化</p>
+  </div>
+
+  <div class="marketing-feature">
+    <div class="icon-box"><i class="fa fa-line-chart"></i></div>
+    <p>📊 依据数据走势进行长期调整</p>
+  </div>
+
+  <div class="marketing-feature">
+    <div class="icon-box"><i class="fa fa-handshake-o"></i></div>
+    <p>🤝 适合长期阶段性合作规划</p>
+  </div>
+</div>
+
+<!-- WHO -->
+<div class="section-wrapper who-section">
+  <h2 class="section-title-main">适合对象 | Who We Work With</h2>
+
+  <div class="who-grid">
+    <div class="who-card">
+      <div class="who-title"><i class="fa fa-shopping-bag"></i> 电商与中小企业</div>
+      <div class="who-text">打造长期稳定的品牌曝光与信任感</div>
+    </div>
+
+    <div class="who-card">
+      <div class="who-title"><i class="fa fa-graduation-cap"></i> 课程与培训</div>
+      <div class="who-text">透过内容建立专业度与认知度</div>
+    </div>
+
+    <div class="who-card">
+      <div class="who-title"><i class="fa fa-user-circle-o"></i> 个人品牌</div>
+      <div class="who-text">塑造具温度的线上专业形象</div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-bar888">
+  <div class="stats-item888"><div class="stats-number888">10,000+</div><div class="stats-label888">项目经验</div></div>
+  <div class="stats-item888"><div class="stats-number888">3,000+</div><div class="stats-label888">长期客户</div></div>
+  <div class="stats-item888"><div class="stats-number888">7+</div><div class="stats-label888">主要平台</div></div>
+</div>
+  
+  <!-- SERVICE CTA TITLE -->
+<div class="section-wrapper" style="margin-top:18px; margin-bottom:8px;">
+  <span class="section-intro888">
+    <i class="fa fa-hand-o-up animation105"></i>&nbsp;
+    点击下方按钮，了解各平台配套详情
+  </span>
+</div>
+
+  
+
+<!-- ✅ SERVICE BUTTONS (NO TRACKERS) -->
+<div class="buttoncontainer886868">
+
+  <div class="telegrambutton8868" onclick="window.open('https://henghengfollowers.com/telegramservices')"><i class="fa fa-send"></i> 电报配套</div>
+  <div class="instagrambutton8868" onclick="window.open('https://henghengfollowers.com/instagramservices')"><i class="fa fa-instagram"></i> INS 配套</div>
+  <div class="tiktokbutton8868" onclick="window.open('https://henghengfollowers.com/tiktokservices')"><i class="fa fa-video-camera"></i> TikTok 配套</div>
+  <div class="youtubebutton8868" onclick="window.open('https://henghengfollowers.com/youtubeservices')"><i class="fa fa-youtube-play"></i> 油管配套</div>
+  <div class="xiaohongshubutton8868" onclick="window.open('https://henghengfollowers.com/xiaohongshuservices')"><i class="fa fa-book"></i> 小红书配套</div>
+  <div class="twitterbutton8868" onclick="window.open('https://henghengfollowers.com/twitterservices')"><i class="fa fa-twitter"></i> 推特配套</div>
+  <div class="facebookservicesbutton8868" onclick="window.open('https://henghengfollowers.com/facebookservices')"><i class="fa fa-facebook-square"></i> FB 配套</div>
+  <div class="fbliveviewsbutton8868" onclick="window.open('https://henghengfollowers.com/fbliveviews')"><i class="fa fa-facebook"></i> 直播配套</div>
+  <div class="postcommentsbutton8868" onclick="window.open('https://henghengfollowers.com/postcomments')"><i class="fa fa-comment"></i> 评论配套</div>
+  <div class="videoviews8868" onclick="window.open('https://henghengfollowers.com/videoviews')"><i class="fa fa-eye"></i> 观看配套</div>
+  <div class="postlikes8868" onclick="window.open('https://henghengfollowers.com/postlikes')"><i class="fa fa-thumbs-up"></i> 点赞配套</div>
+  <div class="chineseservices8868" onclick="window.open('https://henghengfollowers.com/chineseservices')"><i class="fa fa-star"></i> 华人配套</div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer888">
+
+  <!-- QUICK LINKS SECTION -->
+  <div class="footer-links888">
+    <div class="footer-link-btn888"
+         onclick="window.open('https://henghengdigital.com/', '_self')">
+      🏠 首页 Home
+    </div>
+
+    <div class="footer-link-btn888"
+         onclick="window.open('https://henghengdigital.com/privacy', '_self')">
+      🔒 隐私政策 Privacy Policy
+    </div>
+
+    <!-- ✅ NEW: ABOUT US BUTTON -->
+    <div class="footer-link-btn888"
+         onclick="window.open('https://henghengdigital.com/about', '_self')">
+      🏢 关于我们 About Us
+    </div>
+  </div>
+
+  <!-- ✅ FOOTER CONTACT LINKS -->
+  <div class="footer-social888">
+    <a href="https://wa.me/message/7EHBNIMJ3SKSB1" target="_blank" class="footer-social-link888">
+      <i class="fa fa-whatsapp"></i> WhatsApp
+    </a>
+
+    <a href="http://m.me/HHWEBSOLUTIONS" target="_blank" class="footer-social-link888">
+      <i class="fa fa-facebook-official"></i> Messenger
+    </a>
+
+    <a href="https://instagram.com/henghengfollowers" target="_blank" class="footer-social-link888">
+      <i class="fa fa-instagram"></i> Instagram
+    </a>
+
+    <a href="https://t.me/henghengfollowers" target="_blank" class="footer-social-link888">
+      <i class="fa fa-send"></i> Telegram
+    </a>
+  </div>
+
+  <!-- COPYRIGHT -->
+  <div class="footer-text888">
+    © 2025 HengHengDigital™ ｜ 兴兴社媒营销团 ｜ All Rights Reserved
+  </div>
+
+</div>
