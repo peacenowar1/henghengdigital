@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Privacy Policy | HengHengDigital 兴兴社媒营销团</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
   <style>
     body {
@@ -157,90 +159,65 @@
 .btn-container689868 {
   display: flex;
   justify-content: center;
-  gap: 14px;
+  gap: 12px;
   flex-wrap: wrap;
   margin-top: 14px;
+  max-width: 320px;   /* ✅ forces clean 2x2 on mobile */
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* DEFAULT = MOBILE FIRST (2 per row, smaller) */
+/* ✅ MOBILE FIRST — ALWAYS 2 PER ROW */
 .btn-telegram689868,
 .btn-whatsapp689868,
 .btn-instagram689868,
 .btn-fb689868 {
   color: #ffffff;
-  width: 46%;                /* 2 per row on mobile */
-  padding: 12px 14px;        /* smaller height for mobile */
+  width: 48%;                /* ✅ 2 per row */
+  padding: 12px 14px;
   border-radius: 999px;
   text-align: center;
   text-decoration: none !important;
-  transition: all 0.3s ease;
   outline: none;
   border: 0;
   font-weight: 900;
-  font-size: 15px;           /* smaller text for mobile */
+  font-size: 15px;
   box-shadow: 0 8px 18px rgba(15, 23, 42, 0.35);
+  transition: all 0.25s ease;
 }
 
-/* Darker Base Colors */
-.btn-telegram689868  { background: linear-gradient(135deg, #2563eb, #1e40af); }   /* Dark Sky Blue */
-.btn-whatsapp689868  { background: linear-gradient(135deg, #15803d, #166534); }   /* Dark Green */
-.btn-instagram689868 { background: linear-gradient(135deg, #be185d, #881337); }   /* Dark Pink */
-.btn-fb689868        { background: linear-gradient(135deg, #1e3a8a, #1e40af); }   /* Dark Facebook Blue */
+/* ✅ COLORS */
+.btn-telegram689868  { background: linear-gradient(135deg, #2563eb, #1e40af); }
+.btn-whatsapp689868  { background: linear-gradient(135deg, #15803d, #166534); }
+.btn-instagram689868 { background: linear-gradient(135deg, #be185d, #881337); }
+.btn-fb689868        { background: linear-gradient(135deg, #1e3a8a, #1e40af); }
 
-/* Strong Visible Hover Effects */
-.btn-telegram689868:hover {
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
-  transform: translateY(-3px);
-  box-shadow: 0 14px 32px rgba(37, 99, 235, 0.55);
-}
-
-.btn-whatsapp689868:hover {
-  background: linear-gradient(135deg, #22c55e, #15803d);
-  transform: translateY(-3px);
-  box-shadow: 0 14px 32px rgba(21, 128, 61, 0.55);
-}
-
-.btn-instagram689868:hover {
-  background: linear-gradient(135deg, #ec4899, #be185d);
-  transform: translateY(-3px);
-  box-shadow: 0 14px 32px rgba(190, 24, 93, 0.55);
-}
-
-.btn-fb689868:hover {
-  background: linear-gradient(135deg, #2563eb, #1e3a8a);
-  transform: translateY(-3px);
-  box-shadow: 0 14px 32px rgba(37, 99, 235, 0.55);
-}
-
-/* Focus state (no underline ever) */
-.btn-telegram689868:focus,
-.btn-whatsapp689868:focus,
-.btn-instagram689868:focus,
-.btn-fb689868:focus {
-  outline: none;
-  text-decoration: none !important;
-}
-
-/* Keep text ALWAYS white on hover (mobile + PC) */
+/* ✅ Hover visual (no text color change) */
+.btn-telegram689868:hover,
 .btn-whatsapp689868:hover,
-.btn-fb689868:hover,
 .btn-instagram689868:hover,
-.btn-telegram689868:hover {
+.btn-fb689868:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.45);
   color: #ffffff !important;
 }
 
-/* DESKTOP — keep your original big look, 4 per row */
+/* ✅ DESKTOP = 4 PER ROW */
 @media (min-width: 768px) {
+  .btn-container689868 {
+    max-width: 900px;
+  }
+
   .btn-telegram689868,
   .btn-whatsapp689868,
   .btn-instagram689868,
   .btn-fb689868 {
-    width: 22%;              /* 4 per row */
-    padding: 18px 20px;      /* taller */
-    font-size: 18px;         /* bigger text */
-    box-shadow: 0 10px 22px rgba(15, 23, 42, 0.35);
+    width: 22%;
+    padding: 18px 20px;
+    font-size: 18px;
   }
 }
+
 
 
     
