@@ -12,6 +12,8 @@
   *,*::before,*::after{box-sizing:border-box;}
   html,body{width:100%;max-width:100%;overflow-x:hidden;background:#eef3fb;font-family:'Microsoft YaHei','Helvetica Neue',Arial,sans-serif;color:#111827;}
 
+
+
   .section-wrapper{max-width:1180px;margin:0 auto;padding:0 12px;}
   .section-title-main{font-size:32px;font-weight:800;text-align:center;color:#031b4e;margin-bottom:10px;}
   .section-subtitle-main{font-size:16px;text-align:center;color:#4b5563;margin-bottom:24px;font-weight:600;}
@@ -81,26 +83,88 @@
   .stats-number888{font-size:26px;font-weight:900;}
   .stats-label888{font-size:14px;color:#9ca3af;font-weight:700;}
 
-  /* ✅ SERVICE BUTTON GRID (NO TRACKERS) */
-  .buttoncontainer886868{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;padding:20px 10px;max-width:1160px;margin:0 auto 30px;}
-  .buttoncontainer886868>div{display:flex;align-items:center;justify-content:center;padding:14px 24px;
-    border-radius:999px;font-weight:900;font-size:16px;color:white;cursor:pointer;box-shadow:0 8px 18px rgba(15,23,42,.25);}
-  .telegrambutton8868{background:#0ea5e9;}
-  .instagrambutton8868{background:#ec4899;}
-  .tiktokbutton8868{background:#020617;}
-  .youtubebutton8868{background:#ef4444;}
-  .xiaohongshubutton8868{background:#f97316;}
-  .twitterbutton8868{background:#38bdf8;}
-  .facebookservicesbutton8868{background:#2563eb;}
-  .fbliveviewsbutton8868{background:#1d4ed8;}
-  .postcommentsbutton8868{background:#6b7280;}
-  .videoviews8868{background:#059669;}
-  .postlikes8868{background:#111827;}
-  .chineseservices8868{background:#d97706;}
+/* ✅ SERVICE BUTTON GRID */
+.buttoncontainer886868 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px 10px 30px;
+  max-width: 1160px;
+  margin: 0 auto;
+}
 
-  @media(min-width:992px){
-    .buttoncontainer886868>div{width:22%;font-size:19px;padding:18px 28px;}
+.buttoncontainer886868 > div {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 16px;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.25);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
+}
+
+/* gap between icon & text */
+.buttoncontainer886868 > div i {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+/* Button Colors */
+.telegrambutton8868        { background-color: #0ea5e9; }
+.instagrambutton8868       { background-color: #ec4899; }
+.tiktokbutton8868          { background-color: #020617; }
+.youtubebutton8868         { background-color: #ef4444; }
+.xiaohongshubutton8868     { background-color: #f97316; }
+.twitterbutton8868         { background-color: #38bdf8; }
+.facebookservicesbutton8868{ background-color: #2563eb; }
+.fbliveviewsbutton8868     { background-color: #1d4ed8; }
+.postcommentsbutton8868    { background-color: #6b7280; }
+.videoviews8868            { background-color: #059669; }
+.postlikes8868             { background-color: #111827; }
+.chineseservices8868       { background-color: #d97706; }
+
+/* ✨ Hover animation */
+.buttoncontainer886868 > div:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.35);
+  filter: brightness(1.06);
+}
+
+/* 📱 Mobile layout */
+@media (max-width: 768px) {
+  .buttoncontainer886868 {
+    gap: 10px;
   }
+
+  .buttoncontainer886868 > div {
+    width: 48%;
+    font-size: 15.5px;
+    padding: 14px 18px;
+  }
+
+  .buttoncontainer886868 > div i {
+    font-size: 18px;
+  }
+}
+
+/* 🖥 PC layout */
+@media (min-width: 769px) {
+  .buttoncontainer886868 > div {
+    width: 22%;
+    font-size: 18px;
+    padding: 18px 28px;
+  }
+
+  .buttoncontainer886868 > div i {
+    font-size: 20px;
+  }
+}
+
 
   .footer888{background:linear-gradient(135deg,#020617,#0f172a);padding:22px 10px;text-align:center;}
   .footer-text888{color:#e5e7eb;font-size:13.5px;font-weight:600;}
