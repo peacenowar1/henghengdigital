@@ -131,9 +131,8 @@ html, body {
   .stats-bar888{max-width:1180px;margin:16px auto 36px;background:#020617;border-radius:16px;padding:18px;
     display:flex;flex-wrap:wrap;gap:16px;justify-content:center;}
   .stats-item888{text-align:center;color:#e5e7eb;flex:1 1 160px;}
-  .stats-number888{font-size:26px;font-weight:900;}
   .stats-label888{font-size:14px;color:#9ca3af;font-weight:700;}
-
+   
 
     @media (max-width: 768px) {
   .stats-bar888 {
@@ -141,6 +140,49 @@ html, body {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+
+   .stats-number888 {
+  font-size: 34px;
+  font-weight: 900;
+  color: #020617;
+  height: 42px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  transition: transform 0.25s ease, text-shadow 0.25s ease;
+}
+
+/* 🔥 Neon glow while rolling */
+.stats-number888.rolling {
+  color: #0ea5e9;
+  text-shadow:
+    0 0 6px rgba(14, 165, 233, 0.9),
+    0 0 14px rgba(14, 165, 233, 0.9);
+  transform: scale(1.08);
+}
+
+/* ✅ Bounce landing */
+.stats-number888.landed {
+  animation: bounceFinish888 0.6s ease;
+}
+
+/* ✨ Soft pulse after landing */
+.stats-number888.pulse {
+  animation: glowPulse888 1.8s ease-in-out infinite;
+}
+
+@keyframes bounceFinish888 {
+  0%   { transform: scale(1.25); }
+  50%  { transform: scale(0.92); }
+  100% { transform: scale(1); }
+}
+
+@keyframes glowPulse888 {
+  0% { text-shadow: 0 0 6px rgba(14,165,233,0.4); }
+  50% { text-shadow: 0 0 14px rgba(14,165,233,0.9); }
+  100% { text-shadow: 0 0 6px rgba(14,165,233,0.4); }
 }
 
 
@@ -500,10 +542,76 @@ html, body {
 
 <!-- STATS -->
 <div class="stats-bar888">
-  <div class="stats-item888"><div class="stats-number888">10,000+</div><div class="stats-label888">项目经验</div></div>
-  <div class="stats-item888"><div class="stats-number888">3,000+</div><div class="stats-label888">长期客户</div></div>
-  <div class="stats-item888"><div class="stats-number888">7+</div><div class="stats-label888">主要平台</div></div>
+  <div class="stats-item888">
+    <div class="stats-number888" data-target="10000">0</div>
+    <div class="stats-label888">项目经验</div>
+  </div>
+
+  <div class="stats-item888">
+    <div class="stats-number888" data-target="3000">0</div>
+    <div class="stats-label888">长期客户</div>
+  </div>
+
+  <div class="stats-item888">
+    <div class="stats-number888" data-target="7">0</div>
+    <div class="stats-label888">主要平台</div>
+  </div>
 </div>
+
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const counters = document.querySelectorAll(".stats-number888");
+
+  function animateCounter(counter) {
+    const target = +counter.getAttribute("data-target");
+    const speed = 22; // smaller = faster
+    let current = 0;
+
+    counter.classList.add("rolling");
+
+    const update = () => {
+      const increment = Math.max(1, Math.ceil(target / 70));
+      current += increment;
+
+      if (current < target) {
+        counter.textContent = current.toLocaleString();
+        requestAnimationFrame(update);
+      } else {
+        counter.textContent = target.toLocaleString() + "+";
+
+        // ✅ Stop rolling glow
+        counter.classList.remove("rolling");
+
+        // ✅ Bounce landing
+        counter.classList.add("landed");
+
+        // ✅ Add soft pulse after bounce
+        setTimeout(() => {
+          counter.classList.remove("landed");
+          counter.classList.add("pulse");
+        }, 600);
+      }
+    };
+
+    update();
+  }
+
+  // ✅ Trigger when visible
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.6 });
+
+  counters.forEach(counter => observer.observe(counter));
+
+});
+</script>
+
   
   <!-- SERVICE CTA TITLE -->
 <div class="section-wrapper" style="margin-top:18px; margin-bottom:8px;">
