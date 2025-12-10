@@ -972,6 +972,35 @@ background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 40%, #e2e8f0 100%);
   }
 }
 
+    .slot888 {
+  font-weight: 900;
+  color: #ffffff;
+  display: inline-block;
+  min-width: 90px;
+  text-align: center;
+  text-shadow:
+    0 0 6px rgba(255,255,255,0.6),
+    0 0 12px rgba(255,255,255,0.4);
+  transition: all 0.25s ease;
+}
+
+.slot888.rolling {
+  color: #38bdf8;
+  text-shadow:
+    0 0 12px rgba(56,189,248,1),
+    0 0 28px rgba(56,189,248,1);
+  transform: scale(1.12);
+}
+
+.slot888.landed {
+  animation: bounceFinish888 0.6s ease;
+}
+
+.slot888.pulse {
+  animation: glowPulse888 2s ease-in-out infinite;
+}
+
+
 
 
   </style>
@@ -1177,7 +1206,41 @@ background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 40%, #e2e8f0 100%);
 
 <!-- CREDIBILITY / FEATURES -->
 <div class="marketing666" style="border:3px solid #000;">
-  <h1 class="marketing-title">🌟 10,000+ 客户选择｜3,000+ 品牌长期合作</h1>
+ <h1 class="marketing-title">
+  🌟 
+  <span class="slot888" data-target="10000">0</span>+ 客户选择 ｜ 
+  <span class="slot888" data-target="3000">0</span>+ 品牌长期合作
+</h1>
+
+
+<script>
+function animateSlot(el, target) {
+  let current = 0;
+  const increment = Math.ceil(target / 120);
+
+  el.classList.add("rolling");
+
+  const timer = setInterval(() => {
+    current += increment;
+    if (current >= target) {
+      current = target;
+      clearInterval(timer);
+      el.classList.remove("rolling");
+      el.classList.add("landed", "pulse");
+    }
+    el.innerText = current.toLocaleString();
+  }, 30);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".slot888").forEach(el => {
+    const target = parseInt(el.dataset.target, 10);
+    animateSlot(el, target);
+  });
+});
+</script>
+
+  
   <h2 class="marketing-subtitle">专注「长期、稳定、好沟通」的社交媒体成长伙伴</h2>
   <p class="marketing-content">
     我们以 <b>“稳定＋可持续”</b> 为前提，结合市场经验与平台规则，
