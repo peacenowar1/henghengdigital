@@ -143,24 +143,28 @@ html, body {
 }
 
 
-   .stats-number888 {
-  font-size: 34px;
+  .stats-number888 {
+  font-size: 36px;
   font-weight: 900;
-  color: #020617;
-  height: 42px;
+  color: #ffffff;                /* ✅ Pure white base */
+  height: 44px;
   overflow: hidden;
   position: relative;
   display: inline-block;
   transition: transform 0.25s ease, text-shadow 0.25s ease;
+  text-shadow: 
+    0 0 6px rgba(255,255,255,0.6),
+    0 0 12px rgba(255,255,255,0.4); /* ✅ Always visible on black */
 }
 
 /* 🔥 Neon glow while rolling */
 .stats-number888.rolling {
-  color: #0ea5e9;
+  color: #38bdf8;   /* ✅ Bright cyan */
   text-shadow:
-    0 0 6px rgba(14, 165, 233, 0.9),
-    0 0 14px rgba(14, 165, 233, 0.9);
-  transform: scale(1.08);
+    0 0 8px rgba(56,189,248,1),
+    0 0 18px rgba(56,189,248,1),
+    0 0 28px rgba(56,189,248,0.9);
+  transform: scale(1.1);
 }
 
 /* ✅ Bounce landing */
@@ -170,19 +174,27 @@ html, body {
 
 /* ✨ Soft pulse after landing */
 .stats-number888.pulse {
-  animation: glowPulse888 1.8s ease-in-out infinite;
+  animation: glowPulse888 2s ease-in-out infinite;
 }
 
 @keyframes bounceFinish888 {
-  0%   { transform: scale(1.25); }
+  0%   { transform: scale(1.3); }
   50%  { transform: scale(0.92); }
   100% { transform: scale(1); }
 }
 
 @keyframes glowPulse888 {
-  0% { text-shadow: 0 0 6px rgba(14,165,233,0.4); }
-  50% { text-shadow: 0 0 14px rgba(14,165,233,0.9); }
-  100% { text-shadow: 0 0 6px rgba(14,165,233,0.4); }
+  0% {
+    text-shadow: 0 0 8px rgba(56,189,248,0.5);
+  }
+  50% {
+    text-shadow: 
+      0 0 14px rgba(56,189,248,1),
+      0 0 28px rgba(56,189,248,0.9);
+  }
+  100% {
+    text-shadow: 0 0 8px rgba(56,189,248,0.5);
+  }
 }
 
 
