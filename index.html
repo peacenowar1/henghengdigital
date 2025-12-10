@@ -742,23 +742,53 @@ background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 40%, #e2e8f0 100%);
     }
 
 
-/* ✅ WHO CARD 基础过渡效果 */
+/* ✅ WHO CARD 基础过渡效果（防闪烁 GPU 版本） */
 .who-card {
-  transition: all 0.35s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
   position: relative;
   overflow: hidden;
+
+  /* ✅ 关键防闪设置 */
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
-/* ✅ Hover 时卡片“浮起来”＋发光 */
+/* ✅ 用伪层代替真实 background 变化（彻底消灭白闪） */
+.who-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #020617, #0f172a, #020617);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 0;
+}
+
+/* ✅ Hover 时“浮起来”＋发光（不再直接改 background） */
 .who-card:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow:
     0 16px 40px rgba(56, 189, 248, 0.45),
     0 0 22px rgba(56, 189, 248, 0.35);
-  background: linear-gradient(135deg, #020617, #0f172a, #020617);
+}
+
+/* ✅ Hover 时背景渐变显示 */
+.who-card:hover::before {
+  opacity: 1;
+}
+
+/* ✅ 保证文字永远在最上层（防被伪层盖掉） */
+.who-card > * {
+  position: relative;
+  z-index: 2;
 }
 
 /* ✅ Hover 时标题更亮 */
+.who-card .who-title {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
 .who-card:hover .who-title {
   color: #38bdf8;
   text-shadow:
@@ -767,19 +797,25 @@ background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 40%, #e2e8f0 100%);
 }
 
 /* ✅ Hover 时图标轻微放大 + 发光 */
+.who-card .who-title i {
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
 .who-card:hover .who-title i {
   transform: scale(1.15);
   color: #38bdf8;
   text-shadow:
     0 0 10px rgba(56,189,248,0.9);
-  transition: all 0.3s ease;
 }
 
-/* ✅ Hover 时文字微亮 */
+/* ✅ Hover 时文字微亮（不使用 opacity 防止闪白） */
+.who-card .who-text {
+  transition: color 0.3s ease;
+}
+
 .who-card:hover .who-text {
   color: #f1f5f9;
 }
-
 
     
 
