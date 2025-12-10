@@ -974,21 +974,21 @@ background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 40%, #e2e8f0 100%);
 
     .slot888 {
   font-weight: 900;
-  color: #ffffff;
+  color: #0f172a; /* ✅ Dark navy for white background */
   display: inline-block;
   min-width: 90px;
   text-align: center;
   text-shadow:
-    0 0 6px rgba(255,255,255,0.6),
-    0 0 12px rgba(255,255,255,0.4);
+    0 0 6px rgba(15,23,42,0.15),
+    0 0 10px rgba(15,23,42,0.12);
   transition: all 0.25s ease;
 }
 
 .slot888.rolling {
-  color: #38bdf8;
+  color: #2563eb; /* ✅ Blue that pops on white */
   text-shadow:
-    0 0 12px rgba(56,189,248,1),
-    0 0 28px rgba(56,189,248,1);
+    0 0 10px rgba(37,99,235,0.6),
+    0 0 20px rgba(37,99,235,0.4);
   transform: scale(1.12);
 }
 
@@ -997,9 +997,12 @@ background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 40%, #e2e8f0 100%);
 }
 
 .slot888.pulse {
+  color: #16a34a; /* ✅ Green pulse after landing */
+  text-shadow:
+    0 0 10px rgba(22,163,74,0.6),
+    0 0 20px rgba(22,163,74,0.4);
   animation: glowPulse888 2s ease-in-out infinite;
 }
-
 
 
 
@@ -1218,6 +1221,7 @@ function animateSlot(el, target) {
   let current = 0;
   const increment = Math.ceil(target / 120);
 
+  el.classList.remove("landed", "pulse");
   el.classList.add("rolling");
 
   const timer = setInterval(() => {
@@ -1232,13 +1236,19 @@ function animateSlot(el, target) {
   }, 30);
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+function startSlotLoop() {
   document.querySelectorAll(".slot888").forEach(el => {
     const target = parseInt(el.dataset.target, 10);
     animateSlot(el, target);
   });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  startSlotLoop();               // ✅ First run
+  setInterval(startSlotLoop, 6000); // ✅ Repeat every 6s forever
 });
 </script>
+
 
   
   <h2 class="marketing-subtitle">专注「长期、稳定、好沟通」的社交媒体成长伙伴</h2>
