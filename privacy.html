@@ -102,6 +102,7 @@
     }
 
 /* ===== FOOTER ===== */
+/* ===== FOOTER ===== */
 .footer888 {
   width: 100%;
   background: linear-gradient(135deg, #020617, #0f172a);
@@ -126,7 +127,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 /* QUICK LINK BUTTON */
@@ -148,7 +149,38 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
 }
 
-/* MOBILE FOOTER TEXT SIZE */
+/* ✅ NEW: FOOTER SOCIAL LINKS */
+.footer-social888 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.footer-social-link888 {
+  color: #e5e7eb;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.85;
+  transition: 0.25s ease;
+}
+
+.footer-social-link888 i {
+  font-size: 14px;   /* ✅ Small footer icons */
+}
+
+.footer-social-link888:hover {
+  opacity: 1;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+/* MOBILE FOOTER SIZE */
 @media (max-width: 768px) {
   .footer-text888 {
     font-size: 12px;
@@ -158,6 +190,10 @@
   .footer-link-btn888 {
     font-size: 13px;
     padding: 8px 18px;
+  }
+
+  .footer-social-link888 {
+    font-size: 12.5px;
   }
 }
 
@@ -254,6 +290,7 @@
   </div>
 
  <!-- FOOTER -->
+<!-- FOOTER -->
 <div class="footer888">
 
   <!-- QUICK LINKS SECTION -->
@@ -269,9 +306,24 @@
     </div>
   </div>
 
-  <!-- MESSAGING LINKS -->
+  <!-- ✅ NEW: FOOTER CONTACT LINKS -->
+  <div class="footer-social888">
+    <a href="https://wa.me/message/7EHBNIMJ3SKSB1" target="_blank" class="footer-social-link888">
+      <i class="fa fa-whatsapp"></i> WhatsApp
+    </a>
 
+    <a href="http://m.me/HHWEBSOLUTIONS" target="_blank" class="footer-social-link888">
+      <i class="fa fa-facebook-official"></i> Messenger
+    </a>
 
+    <a href="https://instagram.com/henghengfollowers" target="_blank" class="footer-social-link888">
+      <i class="fa fa-instagram"></i> Instagram
+    </a>
+
+    <a href="https://t.me/henghengfollowers" target="_blank" class="footer-social-link888">
+      <i class="fa fa-send"></i> Telegram
+    </a>
+  </div>
 
   <!-- COPYRIGHT -->
   <div class="footer-text888">
@@ -279,6 +331,7 @@
   </div>
 
 </div>
+
 
 
 
