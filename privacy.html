@@ -155,25 +155,25 @@
 }
 
     /* Contact buttons */
-    
+  /* ✅ WRAPPER */
 .btn-container689868 {
   display: flex;
   justify-content: center;
   gap: 12px;
   flex-wrap: wrap;
   margin-top: 14px;
-  max-width: 320px;   /* ✅ forces clean 2x2 on mobile */
+  max-width: 320px;     /* ✅ force 2x2 on mobile */
   margin-left: auto;
   margin-right: auto;
 }
 
-/* ✅ MOBILE FIRST — ALWAYS 2 PER ROW */
+/* ✅ DEFAULT = MOBILE FIRST (2 PER ROW, NEVER STACK) */
 .btn-telegram689868,
 .btn-whatsapp689868,
 .btn-instagram689868,
 .btn-fb689868 {
   color: #ffffff;
-  width: 48%;                /* ✅ 2 per row */
+  width: 48%;                 /* ✅ THIS is what enforces 2 per row */
   padding: 12px 14px;
   border-radius: 999px;
   text-align: center;
@@ -186,13 +186,13 @@
   transition: all 0.25s ease;
 }
 
-/* ✅ COLORS */
+/* ✅ DARKER COLORS */
 .btn-telegram689868  { background: linear-gradient(135deg, #2563eb, #1e40af); }
 .btn-whatsapp689868  { background: linear-gradient(135deg, #15803d, #166534); }
 .btn-instagram689868 { background: linear-gradient(135deg, #be185d, #881337); }
 .btn-fb689868        { background: linear-gradient(135deg, #1e3a8a, #1e40af); }
 
-/* ✅ Hover visual (no text color change) */
+/* ✅ HOVER (VISUAL ONLY, NO COLOR CHANGE) */
 .btn-telegram689868:hover,
 .btn-whatsapp689868:hover,
 .btn-instagram689868:hover,
@@ -202,7 +202,7 @@
   color: #ffffff !important;
 }
 
-/* ✅ DESKTOP = 4 PER ROW */
+/* ✅ PC ONLY — 4 PER ROW */
 @media (min-width: 768px) {
   .btn-container689868 {
     max-width: 900px;
@@ -212,12 +212,11 @@
   .btn-whatsapp689868,
   .btn-instagram689868,
   .btn-fb689868 {
-    width: 22%;
+    width: 22%;              /* ✅ 4 per row on PC */
     padding: 18px 20px;
     font-size: 18px;
   }
 }
-
 
 
     
