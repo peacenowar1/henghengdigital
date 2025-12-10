@@ -741,6 +741,48 @@ background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 40%, #e2e8f0 100%);
       }
     }
 
+
+/* ✅ WHO CARD 基础过渡效果 */
+.who-card {
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✅ Hover 时卡片“浮起来”＋发光 */
+.who-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 16px 40px rgba(56, 189, 248, 0.45),
+    0 0 22px rgba(56, 189, 248, 0.35);
+  background: linear-gradient(135deg, #020617, #0f172a, #020617);
+}
+
+/* ✅ Hover 时标题更亮 */
+.who-card:hover .who-title {
+  color: #38bdf8;
+  text-shadow:
+    0 0 8px rgba(56,189,248,0.8),
+    0 0 18px rgba(56,189,248,0.6);
+}
+
+/* ✅ Hover 时图标轻微放大 + 发光 */
+.who-card:hover .who-title i {
+  transform: scale(1.15);
+  color: #38bdf8;
+  text-shadow:
+    0 0 10px rgba(56,189,248,0.9);
+  transition: all 0.3s ease;
+}
+
+/* ✅ Hover 时文字微亮 */
+.who-card:hover .who-text {
+  color: #f1f5f9;
+}
+
+
+    
+
     /* ---------------- SERVICE BUTTON GRID (配套) ---------------- */
 
    .buttoncontainer886868 {
