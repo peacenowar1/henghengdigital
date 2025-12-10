@@ -13,37 +13,23 @@
 </script>
 
 
- <!-- ✅ CONTACT CONVERSION -->
 <script>
-function gtag_contact_click(url) {
+function gtag_report_conversion(url) {
   var callback = function () {
-    if (typeof url !== 'undefined') {
+    if (typeof(url) !== 'undefined') {
       window.open(url, '_blank');
     }
   };
+
   gtag('event', 'conversion', {
       'send_to': 'AW-17792928320/_JdVCM3V-M4bEMCUqqRC',
       'event_callback': callback
   });
+
   return false;
 }
 </script>
 
-<!-- ✅ SERVICE CONVERSION -->
-<script>
-function gtag_service_click(url) {
-  var callback = function () {
-    if (typeof url !== 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17792928320/cqLPCLnD-s4bEMCUqqRC',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
 
 
 
@@ -1049,21 +1035,19 @@ background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 40%, #e2e8f0 100%);
   <br><br>
 
 <div class="btn-container689868" style="margin-bottom:6px">
-
   <a href="https://wa.me/message/7EHBNIMJ3SKSB1"
      target="_blank"
      class="btn-whatsapp689868"
-     onclick="return gtag_contact_click(this.href);">
+     onclick="return gtag_report_conversion(this.href);">
     <i class="fa fa-whatsapp"></i> WhatsApp 咨询
   </a>
 
   <a href="http://m.me/HHWEBSOLUTIONS"
      target="_blank"
      class="btn-fb689868"
-     onclick="return gtag_contact_click(this.href);">
+     onclick="return gtag_report_conversion(this.href);">
     <i class="fa fa-facebook-official"></i> Messenger
   </a>
-
 </div>
 
 <div class="btn-container689868">
@@ -1071,28 +1055,21 @@ background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 40%, #e2e8f0 100%);
   <div class="btn-instagram689868"
        role="link"
        tabindex="0"
-       onclick="return gtag_contact_click('https://instagram.com/henghengfollowers');"
-       onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();gtag_contact_click('https://instagram.com/henghengfollowers')}">
+       onclick="return gtag_report_conversion('https://instagram.com/henghengfollowers');"
+       onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();gtag_report_conversion('https://instagram.com/henghengfollowers')}">
     <i class="fa fa-instagram"></i> Instagram
   </div>
 
   <div class="btn-telegram689868"
        role="link"
        tabindex="0"
-       onclick="return gtag_contact_click('https://t.me/henghengfollowers');"
-       onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();gtag_contact_click('https://t.me/henghengfollowers')}">
+       onclick="return gtag_report_conversion('https://t.me/henghengfollowers');"
+       onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();gtag_report_conversion('https://t.me/henghengfollowers')}">
     <i class="fa fa-send"></i> Telegram
   </div>
 
 </div>
 
-  <br><br>
-  <p class="wechatcontact">Telegram (电报) 联系二维码：</p>
-  <div style="display: flex; gap: 15px; justify-content: center; align-items: center;">
-    <img class="wechat-img" src="https://storage.perfectcdn.com/qwg3d7/wgl8nchxla5bbkby.jpg" alt="telegram qr 1">
-    <img class="wechat-img" src="https://storage.perfectcdn.com/qwg3d7/2qux3ocsixsoarna.jpg" alt="telegram qr 2">
-  </div>
-</div>
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
@@ -1285,66 +1262,67 @@ background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 40%, #e2e8f0 100%);
 <div class="buttoncontainer886868">
 
   <div class="telegrambutton8868"
-       onclick="return gtag_service_click('https://henghengfollowers.com/telegramservices');">
+       onclick="return gtag_report_conversion('https://henghengfollowers.com/telegramservices');">
     <i class="fa fa-send"></i> 电报配套
   </div>
 
   <div class="instagrambutton8868"
-       onclick="return gtag_service_click('https://henghengfollowers.com/instagramservices');">
+       onclick="return gtag_report_conversion('https://henghengfollowers.com/instagramservices');">
     <i class="fa fa-instagram"></i> INS 配套
   </div>
 
   <div class="tiktokbutton8868"
-       onclick="return gtag_service_click('https://henghengfollowers.com/tiktokservices');">
+       onclick="return gtag_report_conversion('https://henghengfollowers.com/tiktokservices');">
     <i class="fa fa-video-camera"></i> TikTok 配套
   </div>
 
   <div class="youtubebutton8868"
-       onclick="return gtag_service_click('https://henghengfollowers.com/youtubeservices');">
+       onclick="return gtag_report_conversion('https://henghengfollowers.com/youtubeservices');">
     <i class="fa fa-youtube-play"></i> 油管配套
   </div>
 
   <div class="xiaohongshubutton8868"
-       onclick="return gtag_service_click('https://henghengfollowers.com/xiaohongshuservices');">
+       onclick="return gtag_report_conversion('https://henghengfollowers.com/xiaohongshuservices');">
     <i class="fa fa-book"></i> 小红书配套
   </div>
 
   <div class="twitterbutton8868"
-       onclick="return gtag_service_click('https://henghengfollowers.com/twitterservices');">
+       onclick="return gtag_report_conversion('https://henghengfollowers.com/twitterservices');">
     <i class="fa fa-twitter"></i> 推特配套
   </div>
 
   <div class="facebookservicesbutton8868"
-       onclick="return gtag_service_click('https://henghengfollowers.com/facebookservices');">
+       onclick="return gtag_report_conversion('https://henghengfollowers.com/facebookservices');">
     <i class="fa fa-facebook-square"></i> FB 配套
   </div>
 
   <div class="fbliveviewsbutton8868"
-       onclick="return gtag_service_click('https://henghengfollowers.com/fbliveviews');">
+       onclick="return gtag_report_conversion('https://henghengfollowers.com/fbliveviews');">
     <i class="fa fa-facebook"></i> 直播配套
   </div>
 
   <div class="postcommentsbutton8868"
-       onclick="return gtag_service_click('https://henghengfollowers.com/postcomments');">
+       onclick="return gtag_report_conversion('https://henghengfollowers.com/postcomments');">
     <i class="fa fa-comment"></i> 评论配套
   </div>
 
   <div class="videoviews8868"
-       onclick="return gtag_service_click('https://henghengfollowers.com/videoviews');">
+       onclick="return gtag_report_conversion('https://henghengfollowers.com/videoviews');">
     <i class="fa fa-eye"></i> 观看配套
   </div>
 
   <div class="postlikes8868"
-       onclick="return gtag_service_click('https://henghengfollowers.com/postlikes');">
+       onclick="return gtag_report_conversion('https://henghengfollowers.com/postlikes');">
     <i class="fa fa-thumbs-up"></i> 点赞配套
   </div>
 
   <div class="chineseservices8868"
-       onclick="return gtag_service_click('https://henghengfollowers.com/chineseservices');">
+       onclick="return gtag_report_conversion('https://henghengfollowers.com/chineseservices');">
     <i class="fa fa-star"></i> 华人配套
   </div>
 
 </div>
+
 
 
 
