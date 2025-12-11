@@ -470,7 +470,7 @@ background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 40%, #e2e8f0 100%);
       .smm-platforms88new {
         gap: 10px;
       }
-    }
+    
 
     .fb-icon88new i { color: #2563eb; }
     .ig-icon88new i { color: #ec4899; }
@@ -1628,13 +1628,22 @@ document.addEventListener("DOMContentLoaded", function () {
 <!-- BACK TO HOME (Anti-crawl onclick version) -->
 <div class="buttonhomepage80888-container">
   <div class="buttonhomepage80888"
-       role="button"
-       tabindex="0"
-       onclick="window.open('https://henghengfollowers.com/', '_self')"
-       onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.open('https://henghengfollowers.com/', '_self')}">
-       
-    <i class="fa fa-home" style="margin-right:5px"></i> 前往 HengHengDigital 主站
-  </div>
+     role="button"
+     tabindex="0"
+     onclick="goMain8868()"
+     onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goMain8868()}">
+  <i class="fa fa-home" style="margin-right:5px"></i> 前往 HengHengDigital 主站
+</div>
+
+<script>
+  function goMain8868() {
+    // base64 for: https://henghengfollowers.com/
+    var encoded = "aHR0cHM6Ly9oZW5naGVuZ2ZvbGxvd2Vycy5jb20v";
+    var url = atob(encoded);
+    window.open(url, "_self");
+  }
+</script>
+
 </div>
 
 <br>
