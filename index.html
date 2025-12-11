@@ -1162,21 +1162,54 @@ background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 40%, #e2e8f0 100%);
 
 <div class="btn-container689868">
 
-  <div class="btn-instagram689868"
-       role="link"
-       tabindex="0"
-       onclick="return gtag_report_conversion('https://instagram.com/henghengfollowers');"
-       onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();gtag_report_conversion('https://instagram.com/henghengfollowers')}">
-    <i class="fa fa-instagram"></i> Instagram
-  </div>
+ <div class="btn-instagram689868"
+     role="link"
+     tabindex="0"
+     onclick="return openInsta689868();"
+     onkeydown="handleInstaKey689868(event)">
+  <i class="fa fa-instagram"></i> Instagram
+</div>
 
-  <div class="btn-telegram689868"
-       role="link"
-       tabindex="0"
-       onclick="return gtag_report_conversion('https://t.me/henghengfollowers');"
-       onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();gtag_report_conversion('https://t.me/henghengfollowers')}">
-    <i class="fa fa-send"></i> Telegram
-  </div>
+<div class="btn-telegram689868"
+     role="link"
+     tabindex="0"
+     onclick="return openTg689868();"
+     onkeydown="handleTgKey689868(event)">
+  <i class="fa fa-send"></i> Telegram
+</div>
+
+<script>
+  // Instagram button – paranoid safe mode
+  function openInsta689868() {
+    // base64 for: https://instagram.com/henghengfollowers
+    var encoded = "aHR0cHM6Ly9pbnN0YWdyYW0uY29tL2hlbmdoZW5nZm9sbG93ZXJz";
+    var url = atob(encoded);
+    return gtag_report_conversion(url);
+  }
+
+  function handleInstaKey689868(event) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openInsta689868();
+    }
+  }
+
+  // Telegram button – paranoid safe mode
+  function openTg689868() {
+    // base64 for: https://t.me/henghengfollowers
+    var encoded = "aHR0cHM6Ly90Lm1lL2hlbmdoZW5nZm9sbG93ZXJz";
+    var url = atob(encoded);
+    return gtag_report_conversion(url);
+  }
+
+  function handleTgKey689868(event) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openTg689868();
+    }
+  }
+</script>
+
 </div>
 
 
@@ -1422,65 +1455,132 @@ document.addEventListener("DOMContentLoaded", function () {
 <!-- SERVICE NAV (配套) -->
 <div class="buttoncontainer886868">
 
-  <div class="telegrambutton8868"
-       onclick="return gtag_report_conversion('https://henghengfollowers.com/telegramservices');">
-    <i class="fa fa-send"></i> 电报配套
-  </div>
+<div class="telegrambutton8868"
+     onclick="return openTelegram8868();">
+  <i class="fa fa-send"></i> 电报配套
+</div>
 
-  <div class="instagrambutton8868"
-       onclick="return gtag_report_conversion('https://henghengfollowers.com/instagramservices');">
-    <i class="fa fa-instagram"></i> INS 配套
-  </div>
+<div class="instagrambutton8868"
+     onclick="return openInstagram8868();">
+  <i class="fa fa-instagram"></i> INS 配套
+</div>
 
-  <div class="tiktokbutton8868"
-       onclick="return gtag_report_conversion('https://henghengfollowers.com/tiktokservices');">
-    <i class="fa fa-video-camera"></i> TikTok 配套
-  </div>
+<div class="tiktokbutton8868"
+     onclick="return openTiktok8868();">
+  <i class="fa fa-video-camera"></i> TikTok 配套
+</div>
 
-  <div class="youtubebutton8868"
-       onclick="return gtag_report_conversion('https://henghengfollowers.com/youtubeservices');">
-    <i class="fa fa-youtube-play"></i> 油管配套
-  </div>
+<div class="youtubebutton8868"
+     onclick="return openYoutube8868();">
+  <i class="fa fa-youtube-play"></i> 油管配套
+</div>
 
-  <div class="xiaohongshubutton8868"
-       onclick="return gtag_report_conversion('https://henghengfollowers.com/xiaohongshuservices');">
-    <i class="fa fa-book"></i> 小红书配套
-  </div>
+<div class="xiaohongshubutton8868"
+     onclick="return openXiaohongshu8868();">
+  <i class="fa fa-book"></i> 小红书配套
+</div>
 
-  <div class="twitterbutton8868"
-       onclick="return gtag_report_conversion('https://henghengfollowers.com/twitterservices');">
-    <i class="fa fa-twitter"></i> 推特配套
-  </div>
+<div class="twitterbutton8868"
+     onclick="return openTwitter8868();">
+  <i class="fa fa-twitter"></i> 推特配套
+</div>
 
-  <div class="facebookservicesbutton8868"
-       onclick="return gtag_report_conversion('https://henghengfollowers.com/facebookservices');">
-    <i class="fa fa-facebook-square"></i> FB 配套
-  </div>
+<div class="facebookservicesbutton8868"
+     onclick="return openFacebookServices8868();">
+  <i class="fa fa-facebook-square"></i> FB 配套
+</div>
 
-  <div class="fbliveviewsbutton8868"
-       onclick="return gtag_report_conversion('https://henghengfollowers.com/fbliveviews');">
-    <i class="fa fa-facebook"></i> 直播配套
-  </div>
+<div class="fbliveviewsbutton8868"
+     onclick="return openFbLiveViews8868();">
+  <i class="fa fa-facebook"></i> 直播配套
+</div>
 
-  <div class="postcommentsbutton8868"
-       onclick="return gtag_report_conversion('https://henghengfollowers.com/postcomments');">
-    <i class="fa fa-comment"></i> 评论配套
-  </div>
+<div class="postcommentsbutton8868"
+     onclick="return openPostComments8868();">
+  <i class="fa fa-comment"></i> 评论配套
+</div>
 
-  <div class="videoviews8868"
-       onclick="return gtag_report_conversion('https://henghengfollowers.com/videoviews');">
-    <i class="fa fa-eye"></i> 观看配套
-  </div>
+<div class="videoviews8868"
+     onclick="return openVideoViews8868();">
+  <i class="fa fa-eye"></i> 观看配套
+</div>
 
-  <div class="postlikes8868"
-       onclick="return gtag_report_conversion('https://henghengfollowers.com/postlikes');">
-    <i class="fa fa-thumbs-up"></i> 点赞配套
-  </div>
+<div class="postlikes8868"
+     onclick="return openPostLikes8868();">
+  <i class="fa fa-thumbs-up"></i> 点赞配套
+</div>
 
-  <div class="chineseservices8868"
-       onclick="return gtag_report_conversion('https://henghengfollowers.com/chineseservices');">
-    <i class="fa fa-star"></i> 华人配套
-  </div>
+<div class="chineseservices8868"
+     onclick="return openChineseServices8868();">
+  <i class="fa fa-star"></i> 华人配套
+</div>
+
+<script>
+  function decodeUrl8868(encoded) {
+    return atob(encoded);
+  }
+
+  function openTelegram8868() {
+    var url = decodeUrl8868("aHR0cHM6Ly9oZW5naGVuZ2ZvbGxvd2Vycy5jb20vdGVsZWdyYW1zZXJ2aWNlcw==");
+    return gtag_report_conversion(url);
+  }
+
+  function openInstagram8868() {
+    var url = decodeUrl8868("aHR0cHM6Ly9oZW5naGVuZ2ZvbGxvd2Vycy5jb20vaW5zdGFncmFtc2VydmljZXM=");
+    return gtag_report_conversion(url);
+  }
+
+  function openTiktok8868() {
+    var url = decodeUrl8868("aHR0cHM6Ly9oZW5naGVuZ2ZvbGxvd2Vycy5jb20vdGlrdG9rc2VydmljZXM=");
+    return gtag_report_conversion(url);
+  }
+
+  function openYoutube8868() {
+    var url = decodeUrl8868("aHR0cHM6Ly9oZW5naGVuZ2ZvbGxvd2Vycy5jb20veW91dHViZXNlcnZpY2Vz");
+    return gtag_report_conversion(url);
+  }
+
+  function openXiaohongshu8868() {
+    var url = decodeUrl8868("aHR0cHM6Ly9oZW5naGVuZ2ZvbGxvd2Vycy5jb20veGlhb2hvbmdzaHVzZXJ2aWNlcw==");
+    return gtag_report_conversion(url);
+  }
+
+  function openTwitter8868() {
+    var url = decodeUrl8868("aHR0cHM6Ly9oZW5naGVuZ2ZvbGxvd2Vycy5jb20vdHdpdHRlcnNlcnZpY2Vz");
+    return gtag_report_conversion(url);
+  }
+
+  function openFacebookServices8868() {
+    var url = decodeUrl8868("aHR0cHM6Ly9oZW5naGVuZ2ZvbGxvd2Vycy5jb20vZmFjZWJvb2tzZXJ2aWNlcw==");
+    return gtag_report_conversion(url);
+  }
+
+  function openFbLiveViews8868() {
+    var url = decodeUrl8868("aHR0cHM6Ly9oZW5naGVuZ2ZvbGxvd2Vycy5jb20vZmJsaXZldmlld3M=");
+    return gtag_report_conversion(url);
+  }
+
+  function openPostComments8868() {
+    var url = decodeUrl8868("aHR0cHM6Ly9oZW5naGVuZ2ZvbGxvd2Vycy5jb20vcG9zdGNvbW1lbnRz");
+    return gtag_report_conversion(url);
+  }
+
+  function openVideoViews8868() {
+    var url = decodeUrl8868("aHR0cHM6Ly9oZW5naGVuZ2ZvbGxvd2Vycy5jb20vdmlkZW92aWV3cw==");
+    return gtag_report_conversion(url);
+  }
+
+  function openPostLikes8868() {
+    var url = decodeUrl8868("aHR0cHM6Ly9oZW5naGVuZ2ZvbGxvd2Vycy5jb20vcG9zdGxpa2Vz");
+    return gtag_report_conversion(url);
+  }
+
+  function openChineseServices8868() {
+    var url = decodeUrl8868("aHR0cHM6Ly9oZW5naGVuZ2ZvbGxvd2Vycy5jb20vY2hpbmVzZXNlcnZpY2Vz");
+    return gtag_report_conversion(url);
+  }
+</script>
+
 
 </div>
 
@@ -1582,17 +1682,58 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <div class="btn-container689868">
 
-  <div class="btn-instagram689868" role="link" tabindex="0"
-       onclick="return gtag_report_conversion('https://instagram.com/henghengfollowers');"
-       onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();gtag_report_conversion('https://instagram.com/henghengfollowers')}">
-    <i class="fa fa-instagram"></i> Instagram
-  </div>
+ <div class="btn-instagram689868"
+     role="link"
+     tabindex="0"
+     onclick="return openInsta689868();"
+     onkeydown="handleInstaKey689868(event)">
+  <i class="fa fa-instagram"></i> Instagram
+</div>
 
-  <div class="btn-telegram689868" role="link" tabindex="0"
-       onclick="return gtag_report_conversion('https://t.me/henghengfollowers');"
-       onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();gtag_report_conversion('https://t.me/henghengfollowers')}">
-    <i class="fa fa-send"></i> Telegram
-  </div>
+<div class="btn-telegram689868"
+     role="link"
+     tabindex="0"
+     onclick="return openTg689868();"
+     onkeydown="handleTgKey689868(event)">
+  <i class="fa fa-send"></i> Telegram
+</div>
+
+<script>
+  // Helper to decode base64
+  function decodeUrl689868(encoded) {
+    return atob(encoded);
+  }
+
+  // Instagram – paranoid safe mode
+  function openInsta689868() {
+    // base64 for: https://instagram.com/henghengfollowers
+    var encoded = "aHR0cHM6Ly9pbnN0YWdyYW0uY29tL2hlbmdoZW5nZm9sbG93ZXJz";
+    var url = decodeUrl689868(encoded);
+    return gtag_report_conversion(url);
+  }
+
+  function handleInstaKey689868(event) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openInsta689868();
+    }
+  }
+
+  // Telegram – paranoid safe mode
+  function openTg689868() {
+    // base64 for: https://t.me/henghengfollowers
+    var encoded = "aHR0cHM6Ly90Lm1lL2hlbmdoZW5nZm9sbG93ZXJz";
+    var url = decodeUrl689868(encoded);
+    return gtag_report_conversion(url);
+  }
+
+  function handleTgKey689868(event) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openTg689868();
+    }
+  }
+</script>
 
 </div>
 
