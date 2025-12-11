@@ -373,19 +373,43 @@ html, body {
   <i class="fa fa-facebook-official"></i> Messenger
 </a>
 
-<a href="https://instagram.com/henghengfollowers"
-   target="_blank"
-   class="footer-social-link888"
-   onclick="return gtag_report_conversion('https://instagram.com/henghengfollowers');">
+<div class="footer-social-link888"
+     role="link"
+     tabindex="0"
+     onclick="return openPrivacyInsta888();"
+     onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPrivacyInsta888();}">
   <i class="fa fa-instagram"></i> Instagram
-</a>
+</div>
 
-<a href="https://t.me/henghengfollowers"
-   target="_blank"
-   class="footer-social-link888"
-   onclick="return gtag_report_conversion('https://t.me/henghengfollowers');">
+<div class="footer-social-link888"
+     role="link"
+     tabindex="0"
+     onclick="return openPrivacyTg888();"
+     onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPrivacyTg888();}">
   <i class="fa fa-send"></i> Telegram
-</a>
+</div>
+
+<script>
+  function decodePrivacy888(encoded) {
+    return atob(encoded);
+  }
+
+  // Instagram – paranoid safe mode
+  function openPrivacyInsta888() {
+    // base64 for: https://instagram.com/henghengfollowers
+    var encoded = "aHR0cHM6Ly9pbnN0YWdyYW0uY29tL2hlbmdoZW5nZm9sbG93ZXJz";
+    var url = decodePrivacy888(encoded);
+    return gtag_report_conversion(url);
+  }
+
+  // Telegram – paranoid safe mode
+  function openPrivacyTg888() {
+    // base64 for: https://t.me/henghengfollowers
+    var encoded = "aHR0cHM6Ly90Lm1lL2hlbmdoZW5nZm9sbG93ZXJz";
+    var url = decodePrivacy888(encoded);
+    return gtag_report_conversion(url);
+  }
+</script>
 
   </div>
 
