@@ -964,33 +964,43 @@ background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 40%, #e2e8f0 100%);
     }
     
     /* 🌟 Main styling for the intro line */
-.section-intro888 {
+/* 🌟 Intro line — PC + Mobile (clean + balanced wrap) */
+.section-intro888{
   color: #020617;
-  font-size: 40px;      /* PC size */
+  font-size: 40px;                 /* PC size */
   font-weight: 900;
-  font-family: 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.6;
+  font-family: 'Microsoft YaHei','Helvetica Neue',Arial,sans-serif;
+  line-height: 1.35;               /* nicer for 1–2 lines */
   display: block;
   text-align: center;
-  margin-bottom: 6px;
-   padding: 0 12px;   /* PC + mobile safe spacing */
+  margin: 0 auto 6px;
+  padding: 0 16px;                 /* safe edge spacing */
   box-sizing: border-box;
+  max-width: 980px;                /* keep PC tidy */
 }
 
-.section-intro888 i {
-  font-size: 38px;      /* icon size on PC */
+.section-intro888 i{
+  font-size: 38px;                 /* icon size on PC */
+  vertical-align: -2px;            /* align icon with text */
+  margin-right: 6px;               /* small gap */
 }
 
-/* 📱 Mobile version — smaller and clean */
-@media (max-width: 768px) {
-  .section-intro888 {
-    font-size: 24px;    /* mobile text size */
+/* 📱 Mobile — prevent touching edges + force nicer 2-line wrap */
+@media (max-width: 768px){
+  .section-intro888{
+    font-size: 24px;
+    line-height: 1.25;
+    max-width: 340px;              /* tweak 300–360px to control wrap */
+    padding: 0 12px;
   }
 
-  .section-intro888 i {
-    font-size: 24px;    /* mobile icon size */
+  .section-intro888 i{
+    font-size: 24px;
+    vertical-align: -1px;
   }
 }
+
+
 
    /* ===== FOOTER ===== */
 .footer888 {
