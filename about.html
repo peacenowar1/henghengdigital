@@ -354,33 +354,43 @@ html, body {
     
     
     /* ✅ SERVICE CTA TEXT (above service buttons) */
-.section-intro888 {
+/* 🌟 Intro line — PC + Mobile (clean + balanced wrap) */
+.section-intro888{
   color: #020617;
-  font-size: 22px;      /* PC size */
+  font-size: 45px;                 /* PC size */
   font-weight: 900;
-  font-family: 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.6;
+  font-family: 'Microsoft YaHei','Helvetica Neue',Arial,sans-serif;
+  line-height: 1.35;               /* nicer for 1–2 lines */
   display: block;
   text-align: center;
-  margin-bottom: 10px;
-  letter-spacing: 0.5px;
+  margin: 0 auto 6px;
+  padding: 0 16px;                 /* safe edge spacing */
+  box-sizing: border-box;
+  max-width: 980px;                /* keep PC tidy */
 }
 
-.section-intro888 i {
-  font-size: 24px;      
-  color: #0ea5e9;
+.section-intro888 i{
+  font-size: 45px;                 /* icon size on PC */
+  vertical-align: -2px;            /* align icon with text */
+  margin-right: 6px;               /* small gap */
 }
 
-/* 📱 Mobile version */
-@media (max-width: 768px) {
-  .section-intro888 {
-    font-size: 16px;
+/* 📱 Mobile — prevent touching edges + force nicer 2-line wrap */
+@media (max-width: 768px){
+  .section-intro888{
+    font-size: 28px;
+    line-height: 1.25;
+    max-width: 340px;              /* tweak 300–360px to control wrap */
+    padding: 0 12px;
   }
 
-  .section-intro888 i {
-    font-size: 17px;
+  .section-intro888 i{
+    font-size: 28px;
+    vertical-align: -1px;
   }
 }
+
+
 
 /* ✅ Animation for pointing hand */
 .animation105 {
