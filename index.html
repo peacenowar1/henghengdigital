@@ -1093,6 +1093,35 @@ background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 40%, #e2e8f0 100%);
     0 0 20px rgba(22,163,74,0.4);
   animation: glowPulse888 2s ease-in-out infinite;
 }
+ /* ---------------------------------------------------- */
+
+    .collab888 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.collab-x888 {
+  font-size: 26px;
+  font-weight: 900;
+  color: #a7f3d0;
+  text-shadow:
+    0 0 8px rgba(167, 243, 208, 0.9),
+    0 0 16px rgba(56, 189, 248, 0.8);
+  user-select: none;
+}
+
+@media (max-width: 600px) {
+  .collab888 {
+    gap: 10px;
+  }
+  .collab-x888 {
+    font-size: 20px;
+  }
+}
+
 
 
 
@@ -1105,7 +1134,11 @@ background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 40%, #e2e8f0 100%);
 
 <!-- HERO -->
 <div class="welcome888">
-  <img src="https://storage.perfectcdn.com/qwg3d7/kd1rdl78dqy4ck83.jpg" alt="Logo" class="logo888">
+  <span class="collab888">
+    <img src="https://storage.perfectcdn.com/qwg3d7/kd1rdl78dqy4ck83.jpg" alt="HengHengDigital" class="logo888">
+    <span class="collab-x888">×</span>
+    <img src="https://storage.perfectcdn.com/qwg3d7/z8lbabtzd1qyp0ty.jpg" alt="Partner Logo" class="logo888">
+  </span>
   <p>
     <b>HengHengDigital</b>｜社交媒体营销配套<br>
     帮助您打造 <b>更专业、更稳定</b> 的线上形象
