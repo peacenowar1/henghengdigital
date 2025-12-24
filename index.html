@@ -1095,40 +1095,44 @@ background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 40%, #e2e8f0 100%);
 }
  /* ---------------------------------------------------- */
 /* ===== PC layout (exact spacing) ===== */
-/* ===== Collab container ===== */
+/* ===== Collaboration logos row ===== */
 .collab888 {
-  display: inline-flex;          /* 🔑 shrink to content */
+  display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 14px;           /* center the small box */
+  gap: 6px;                 /* Logo <6px> X <6px> Logo */
+  margin: 8px auto 14px;
 }
 
-/* X spacing exactly as you want */
+/* 🔑 CRITICAL FIX:
+   remove auto margins ONLY inside collab */
+.collab888 .logo888 {
+  margin: 0 !important;     /* overrides: margin: auto */
+  display: block;
+}
+
+/* X styling */
 .collab-x888 {
   font-size: 26px;
   font-weight: 900;
-  margin-left: 6px;
-    margin-right: 6px;
   color: #a7f3d0;
+  user-select: none;
   text-shadow:
     0 0 8px rgba(167, 243, 208, 0.9),
     0 0 16px rgba(56, 189, 248, 0.8);
-  user-select: none;
 }
 
-/* ===== Mobile stays perfect ===== */
+/* ===== Mobile (keep your perfect look) ===== */
 @media (max-width: 600px) {
   .collab888 {
-    display: flex;               /* full width on mobile */
-    justify-content: center;
     gap: 4px;
   }
 
   .collab-x888 {
-    margin: 0;
     font-size: 20px;
   }
 }
+
 
 
 
@@ -1146,15 +1150,16 @@ background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 40%, #e2e8f0 100%);
   
 <div class="collab888">
   <img src="https://storage.perfectcdn.com/qwg3d7/kd1rdl78dqy4ck83.jpg"
-       alt="HengHengDigital"
+       alt="Logo 1"
        class="logo888">
 
-  <div class="collab-x888">×</div>
+  <span class="collab-x888">×</span>
 
   <img src="https://storage.perfectcdn.com/qwg3d7/z8lbabtzd1qyp0ty.jpg"
-       alt="Partner Logo"
+       alt="Logo 2"
        class="logo888">
 </div>
+
 
   
   <p>
