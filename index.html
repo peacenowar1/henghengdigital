@@ -1094,35 +1094,47 @@ background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 40%, #e2e8f0 100%);
   animation: glowPulse888 2s ease-in-out infinite;
 }
  /* ---------------------------------------------------- */
-
- .collab888 {
-  display: inline-flex;
-  align-items: center;
+/* ===== Collaboration logos (PC-first) ===== */
+.collab888 {
+  display: flex;
   justify-content: center;
-  gap: 0px;                 /* PC 不靠 gap */
+  align-items: center;
   margin-bottom: 14px;
 }
 
-/* × 是关键：PC 用负 margin 拉近 */
+/* 🔑 关键：直接压 logo 之间的距离 */
+.collab888 .logo888:first-child {
+  margin-right: -22px;   /* 👈 左 logo 往中间靠 */
+}
+
+.collab888 .logo888:last-child {
+  margin-left: -22px;    /* 👈 右 logo 往中间靠 */
+}
+
+/* × 只负责显示，不撑空间 */
 .collab-x888 {
   font-size: 26px;
   font-weight: 900;
   color: #a7f3d0;
-  margin: 0 -10px;          /* 👈 PC 真正拉近的关键 */
+  z-index: 2;
+  pointer-events: none;
   text-shadow:
     0 0 8px rgba(167, 243, 208, 0.9),
     0 0 16px rgba(56, 189, 248, 0.8);
-  user-select: none;
 }
 
-/* ===== Mobile 保持你现在「完美」的样子 ===== */
+/* ===== Mobile：恢复正常，不挤 ===== */
 @media (max-width: 600px) {
   .collab888 {
-    gap: 4px;               /* mobile 继续用 gap */
+    gap: 6px;
+  }
+
+  .collab888 .logo888:first-child,
+  .collab888 .logo888:last-child {
+    margin: 0;           /* mobile 不用负 margin */
   }
 
   .collab-x888 {
-    margin: 0;              /* mobile 不拉 */
     font-size: 20px;
   }
 }
@@ -1138,17 +1150,21 @@ background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 40%, #e2e8f0 100%);
 
 <!-- HERO -->
 <div class="welcome888">
-  <span class="collab888">
+  
+  
+<div class="collab888">
   <img src="https://storage.perfectcdn.com/qwg3d7/kd1rdl78dqy4ck83.jpg"
        alt="HengHengDigital"
        class="logo888">
 
-  <span class="collab-x888">×</span>
+  <div class="collab-x888">×</div>
 
   <img src="https://storage.perfectcdn.com/qwg3d7/z8lbabtzd1qyp0ty.jpg"
        alt="Partner Logo"
        class="logo888">
-</span>
+</div>
+
+  
   <p>
     <b>HengHengDigital</b>｜社交媒体营销配套<br>
     帮助您打造 <b>更专业、更稳定</b> 的线上形象
