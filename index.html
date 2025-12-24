@@ -1094,47 +1094,34 @@ background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 40%, #e2e8f0 100%);
   animation: glowPulse888 2s ease-in-out infinite;
 }
  /* ---------------------------------------------------- */
-/* ===== Collaboration logos (PC-first) ===== */
+/* ===== PC layout (exact spacing) ===== */
 .collab888 {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   margin-bottom: 14px;
 }
 
-/* 🔑 关键：直接压 logo 之间的距离 */
-.collab888 .logo888:first-child {
-  margin-right: -15px;   /* 👈 左 logo 往中间靠 */
-}
-
-.collab888 .logo888:last-child {
-  margin-left: -15px;    /* 👈 右 logo 往中间靠 */
-}
-
-/* × 只负责显示，不撑空间 */
+/* × controls ALL spacing on PC */
 .collab-x888 {
   font-size: 26px;
   font-weight: 900;
+  margin: 0 6px;          /* 👈 EXACT: 6px left + 6px right */
   color: #a7f3d0;
-  z-index: 2;
   pointer-events: none;
   text-shadow:
     0 0 8px rgba(167, 243, 208, 0.9),
     0 0 16px rgba(56, 189, 248, 0.8);
 }
 
-/* ===== Mobile：恢复正常，不挤 ===== */
+/* ===== Mobile: keep your current perfect look ===== */
 @media (max-width: 600px) {
   .collab888 {
-    gap: 6px;
-  }
-
-  .collab888 .logo888:first-child,
-  .collab888 .logo888:last-child {
-    margin: 0;           /* mobile 不用负 margin */
+    gap: 4px;
   }
 
   .collab-x888 {
+    margin: 0;
     font-size: 20px;
   }
 }
