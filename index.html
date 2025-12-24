@@ -1096,26 +1096,18 @@ background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 40%, #e2e8f0 100%);
  /* ---------------------------------------------------- */
 /* ===== PC layout (exact spacing) ===== */
 /* ===== Collab container ===== */
-.collab888{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin: 0 auto 14px;
-  width: 100%;
+.collab888 {
+  display: inline-flex;          /* 🔑 shrink to content */
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;           /* center the small box */
 }
 
-/* PC only: constrain width so everything closes up */
-@media (min-width: 601px){
-  .collab888{
-    max-width: 320px;   /* 👈 adjust: 260–380px sweet spot */
-  }
-}
-
-/* Keep your X styling */
-.collab-x888{
+/* X spacing exactly as you want */
+.collab-x888 {
   font-size: 26px;
   font-weight: 900;
-  margin: 0 6px;
+  margin: 0 6px;                 /* 👈 6px | X | 6px */
   color: #a7f3d0;
   text-shadow:
     0 0 8px rgba(167, 243, 208, 0.9),
@@ -1123,13 +1115,15 @@ background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 40%, #e2e8f0 100%);
   user-select: none;
 }
 
-/* Mobile: keep your current perfect spacing */
-@media (max-width: 600px){
-  .collab888{
-    max-width: none;
+/* ===== Mobile stays perfect ===== */
+@media (max-width: 600px) {
+  .collab888 {
+    display: flex;               /* full width on mobile */
+    justify-content: center;
     gap: 4px;
   }
-  .collab-x888{
+
+  .collab-x888 {
     margin: 0;
     font-size: 20px;
   }
