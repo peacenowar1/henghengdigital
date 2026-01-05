@@ -503,14 +503,14 @@ html, body {
     /* ----------------------------------------- */
 .teamwork8868 {
   display: flex;
-  justify-content: flex-start;   /* LEFT align */
+  justify-content: flex-start;
   margin: 5px 0;
   max-width: 900px;
   padding: 5px;
 }
 
 .teamwork8868 img {
-  width: 50%;
+  width: 50%;              /* PC size – OK */
   max-width: 100%;
   height: auto;
   border: 3px solid #000;
@@ -527,9 +527,11 @@ html, body {
   }
 
   .teamwork8868 img {
+    width: 100%;           /* 🔥 Bigger on mobile */
     border-radius: 14px;
   }
 }
+
 
 
   </style>
