@@ -22,16 +22,15 @@
 
 <script>
 function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) !== 'undefined') {
-      window.open(url, '_blank');
-    }
-  };
+  if (typeof(url) !== 'undefined') {
+    window.open(url, '_blank');
+  }
 
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17792928320/_JdVCM3V-M4bEMCUqqRC',
-      'event_callback': callback
-  });
+  if (typeof gtag === 'function') {
+    gtag('event', 'conversion', {
+      'send_to': 'AW-17792928320/_JdVCM3V-M4bEMCUqqRC'
+    });
+  }
 
   return false;
 }
