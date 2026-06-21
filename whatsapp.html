@@ -16,23 +16,21 @@
   </script>
 
   <!-- ✅ WhatsApp Contact Conversion -->
-  <script>
-  function gtag_report_conversion(url) {
-    var callback = function () {
-      if (typeof(url) !== 'undefined') {
-        window.open(url, '_blank');
-      }
-    };
-
-    gtag('event', 'conversion', {
-        'send_to': 'AW-17792928320/_JdVCM3V-M4bEMCUqqRC',
-        'event_callback': callback
-    });
-
-    return false;
+ <script>
+function gtag_report_conversion(url) {
+  if (typeof(url) !== 'undefined') {
+    window.open(url, '_blank');
   }
-  </script>
 
+  if (typeof gtag === 'function') {
+    gtag('event', 'conversion', {
+      'send_to': 'AW-17792928320/_JdVCM3V-M4bEMCUqqRC'
+    });
+  }
+
+  return false;
+}
+</script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <style>
